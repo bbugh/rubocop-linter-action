@@ -4,7 +4,7 @@ set -e
 
 if [ "${INPUT_BUNDLE}" == "true" ]
 then
-  bundle install --jobs 4 --retry 3
+  bundle install --deployment --jobs 4 --retry 3
 elif [ -z "${INPUT_VERSION}" ]
 then
   gem install rubocop ${INPUT_ADDITIONAL_GEMS}
